@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "867323860080",
+    "project_id": "tumblr-12cf2",
+    "storage_bucket": "tumblr-12cf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867323860080:android:4a70a8a51f9b0e9c4bd0b5",
+        "android_client_info": {
+          "package_name": "com.sunrin.vacation_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867323860080-s62uciksm09ska05mocdh14850htrm46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYtWDh5e28utiZ5EnZ9ejeLkNR2VXNNSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867323860080-s62uciksm09ska05mocdh14850htrm46.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
