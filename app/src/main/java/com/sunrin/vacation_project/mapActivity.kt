@@ -9,7 +9,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.sunrin.vacation_project.databinding.ActivityMainBinding
 import com.sunrin.vacation_project.databinding.ActivityMapBinding
-import net.daum.android.map.MapView
+import net.daum.mf.map.api.MapView
 
 
 class mapActivity : AppCompatActivity() {

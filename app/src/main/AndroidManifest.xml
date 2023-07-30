@@ -13,9 +13,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
-    <meta-data
-        android:name="com.kakao.sdk.AppKey"
-        android:value="8ffeb4f7158364d75a866edd2de20f81" />
 
     <application
         android:usesCleartextTraffic="true"
@@ -28,21 +25,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vacation_project"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="8ffeb4f7158364d75a866edd2de20f81" />
 
         <activity
             android:name=".mapActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ScannerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
+        </activity>
+        <activity
+            android:name=".ScannerActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".RegisterActivity"
@@ -53,7 +51,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true" >
+        </activity>
     </application>
 
 </manifest>
