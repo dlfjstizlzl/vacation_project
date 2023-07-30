@@ -1,38 +1,29 @@
 package com.sunrin.vacation_project
 
 import android.content.Intent
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
-import android.content.pm.Signature
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Base64
-import android.util.Log
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
+import android.os.Handler
+import android.provider.MediaStore.MediaColumns.DURATION
+import com.sunrin.vacation_project.R
+import com.sunrin.vacation_project.mapActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        getHashKey()
+        Handler().postDelayed({
+            val intent = Intent(this, mapActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+            finish()
+        },DURATION)
     }
-    fun getHashKey(){
-        var packageInfo : PackageInfo = PackageInfo()
-        try {
-            packageInfo = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
-        } catch (e: PackageManager.NameNotFoundException){
-            e.printStackTrace()
-        }
+    companion object {
+        private const val DURATION : Long = 3000
+    }
 
-        for (signature: Signature in packageInfo.signatures){
-            try{
-                var md: MessageDigest = MessageDigest.getInstance("SHA")
-                md.update(signature.toByteArray())
-                Log.e("KEY_HASH", Base64.encodeToString(md.digest(), Base64.DEFAULT))
-            } catch(e: NoSuchAlgorithmException){
-                Log.e("KEY_HASH", "Unable to get MessageDigest. signature = " + signature, e)
-            }
-        }
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

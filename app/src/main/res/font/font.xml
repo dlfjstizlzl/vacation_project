@@ -4,4 +4,6 @@
         android:font="@font/premeduim"/>
     <font
         android:font="@font/presemibold"/>
+    <font
+        android:font="@font/prebold"/>
 </font-family>

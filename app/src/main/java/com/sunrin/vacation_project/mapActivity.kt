@@ -1,5 +1,6 @@
 package com.sunrin.vacation_project
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -24,5 +25,10 @@ class mapActivity : AppCompatActivity() {
         val mapView = MapView(this)
         binding.clKakaoMapView.addView(mapView)
 
+
+        binding.qrbutton.setOnClickListener {
+            val intent = Intent(this, ScannerActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
