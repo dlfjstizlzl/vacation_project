@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/logintext"
+        android:id="@+id/registertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +16,7 @@
         android:layout_marginTop="108dp"
         android:layout_marginStart="16dp"
 
-        android:text="로그인"
+        android:text="회원가입"
         android:textSize="24sp"
         android:textColor="@color/black"
         android:fontFamily="@font/presemibold"/>
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logintext"
+        app:layout_constraintTop_toBottomOf="@id/registertext"
         android:layout_marginTop="97dp"
         android:layout_marginStart="16dp"
 
@@ -44,7 +44,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
 
-        android:text="서비스 이용을 위해 로그인 해주세요."
+        android:text="서비스 이용을 위해 회원가입을 해주세요."
         android:textColor="@color/black"
         android:textSize="14sp"
         android:fontFamily="@font/premeduim"/>
@@ -61,6 +61,7 @@
         android:hint="이메일"
         android:fontFamily="@font/presemibold"
         app:layout_constraintTop_toBottomOf="@+id/subtitletext"
+        android:inputType="textEmailAddress"
         android:layout_marginTop="88dp"/>
 
     <EditText
@@ -78,11 +79,26 @@
         android:inputType="textPassword"
         android:layout_marginTop="20dp"/>
 
+    <EditText
+        android:id="@+id/repasswordedittext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:hint="비밀번호 재입력"
+        android:fontFamily="@font/presemibold"
+        app:layout_constraintTop_toBottomOf="@+id/passwordedittext"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"/>
+
     <Button
-        android:id="@+id/loginbutton"
+        android:id="@+id/registerbutton"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toTopOf="@id/registerbutton"
+        app:layout_constraintBottom_toTopOf="@id/loginbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
@@ -91,13 +107,13 @@
         android:background="@drawable/loginbutton"
 
 
-        android:text="로그인하기"
+        android:text="회원가입하기"
         android:fontFamily="@font/presemibold"
 
         />
 
     <Button
-        android:id="@+id/registerbutton"
+        android:id="@+id/loginbutton"
         android:layout_width="match_parent"
         android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,7 +125,7 @@
         android:background="@drawable/registerbutton"
 
 
-        android:text="회원가입"
+        android:text="로그인하러 가기"
         android:fontFamily="@font/presemibold"
 
         />
