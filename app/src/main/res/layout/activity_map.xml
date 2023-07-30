@@ -8,5 +8,32 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/clKakaoMapView"/>
+        android:id="@+id/clKakaoMapView"
+        android:background="#AAAAAA"
+        />
+    <View
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="@id/bottombar"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/qrbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="텀블러 대여하기"
+        android:textColor="@color/white"
+        android:fontFamily="@font/premeduim"
+        android:drawableStart="@drawable/qr_code_scanner"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="130dp"/>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
