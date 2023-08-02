@@ -37,7 +37,4 @@
         android:drawablePadding="-120dp"
 
         />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
