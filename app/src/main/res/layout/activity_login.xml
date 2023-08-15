@@ -11,70 +11,58 @@
         android:id="@+id/logintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="108dp"
         android:layout_marginStart="16dp"
 
-        android:text="로그인"
+        android:text="텀대서"
         android:textSize="24sp"
         android:textColor="@color/black"
-        android:fontFamily="@font/presemibold"/>
+        android:fontFamily="@font/nanumextrabold"/>
 
-    <TextView
-        android:id="@+id/titletext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logintext"
-        android:layout_marginTop="97dp"
-        android:layout_marginStart="16dp"
-
-        android:text="텀블러 대여 서비스입니다."
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:fontFamily="@font/presemibold"/>
-
-    <TextView
-        android:id="@+id/subtitletext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titletext"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-
-        android:text="서비스 이용을 위해 로그인 해주세요."
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:fontFamily="@font/premeduim"/>
 
     <EditText
         android:id="@+id/loginedittext"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="@drawable/et_grayoutline"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="8dp"
+        android:paddingLeft="14dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logintext"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
 
         android:hint="이메일"
-        android:fontFamily="@font/presemibold"
-        app:layout_constraintTop_toBottomOf="@+id/subtitletext"
+        android:textColorHint="#ACACAC"
+        android:textSize="14sp"
+        android:fontFamily="@font/suitmedium"
         android:layout_marginTop="88dp"/>
 
     <EditText
         android:id="@+id/passwordedittext"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="@drawable/et_grayoutline"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="8dp"
+        android:paddingLeft="14dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
 
         android:hint="비밀번호"
-        android:fontFamily="@font/presemibold"
+        android:textColorHint="#ACACAC"
+        android:fontFamily="@font/suitmedium"
         app:layout_constraintTop_toBottomOf="@+id/loginedittext"
+        android:textSize="14sp"
         android:inputType="textPassword"
         android:layout_marginTop="20dp"/>
 
@@ -82,8 +70,8 @@
         android:id="@+id/loginbutton"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toTopOf="@id/registerbutton"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_autologin"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -91,28 +79,65 @@
         android:background="@drawable/loginbutton"
 
 
-        android:text="로그인하기"
-        android:fontFamily="@font/presemibold"
+        android:text="로그인"
+        android:fontFamily="@font/suitmedium"
+        android:textColor="@color/white"
+        android:textSize="17dp"
 
         />
 
-    <Button
-        android:id="@+id/registerbutton"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <CheckBox
+        android:id="@+id/cb_autologin"
+        android:checked="falsr"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:button="@android:color/transparent"
+
+        app:layout_constraintTop_toBottomOf="@id/passwordedittext"
+        app:layout_constraintStart_toStartOf="@id/passwordedittext"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/checkbox_autologin"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동 로그인"
+        android:fontFamily="@font/suitmedium"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/cb_autologin"
+        app:layout_constraintBottom_toBottomOf="@id/cb_autologin"
+        app:layout_constraintStart_toEndOf="@id/cb_autologin"
+        android:layout_marginStart="12dp"
+        />
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="17dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="29dp"
-        android:background="@drawable/registerbutton"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/loginbutton"
+        android:layout_marginTop="32dp"
+        >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원이 아니신가요?"
+            android:textSize="14sp"
+            android:fontFamily="@font/suitmedium"
+            android:textColor="#ACACAC"/>
+        <TextView
+            android:id="@+id/registerbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입 하기"
+            android:layout_marginStart="12dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/suitmedium"
+            android:textColor="#000000"/>
 
-        android:text="회원가입"
-        android:fontFamily="@font/presemibold"
+    </LinearLayout>
 
-        />
 
 
 

@@ -9,13 +9,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="텀블러 대여 서비스"
+        android:text="텀대서"
         android:textColor="#000000"
-        android:fontFamily="@font/prebold"
-        android:textSize="24sp"
+        android:fontFamily="@font/nanumextrabold"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

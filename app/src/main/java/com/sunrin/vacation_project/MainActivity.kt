@@ -12,18 +12,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         Handler().postDelayed({
-            val intent = Intent(this, mapActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             finish()
         },DURATION)
     }
     companion object {
-        private const val DURATION : Long = 3000
+        private const val DURATION : Long = 2000
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
     }
+
 }
