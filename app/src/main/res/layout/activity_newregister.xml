@@ -29,7 +29,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이메일을 입력해주세요."
+            android:text="전화번호를 입력해주세요."
             android:textSize="22dp"
             android:fontFamily="@font/nanumextrabold"
             android:textColor="@color/black"
@@ -41,33 +41,36 @@
             android:id="@+id/subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이메일"
+            android:text="전화번호"
             android:layout_marginStart="16dp"
             android:layout_marginTop="42dp"
             android:textColor="@color/black"
             android:fontFamily="@font/suitmedium"
             />
+
         <EditText
             android:id="@+id/input_edittext"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/et_grayoutline"
-            android:drawableLeft="@drawable/mail"
-            android:drawableRight="@null"
-
-            android:drawablePadding="8dp"
-            android:paddingLeft="14dp"
-
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:paddingRight="14dp"
 
-            android:maxLines="1"
-            android:hint="이메일"
-            android:textColorHint="#ACACAC"
-            android:textSize="14sp"
+            android:background="@drawable/et_grayoutline"
+            android:drawableLeft="@drawable/smartphone_gray"
+
+            android:maxLength="15"
+            android:drawableRight="@null"
+            android:drawablePadding="8dp"
             android:fontFamily="@font/suitmedium"
-            android:layout_marginTop="8dp">
+
+            android:hint="전화번호"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:textColorHint="#ACACAC"
+            android:textSize="14sp">
 
         </EditText>
 
