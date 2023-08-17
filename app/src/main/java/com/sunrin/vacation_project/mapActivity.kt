@@ -51,7 +51,7 @@ class mapActivity : AppCompatActivity() {
                 if(response.isSuccessful){
                     // 정상적으로 통신이 성고된 경우
                     var result: User? = response.body()
-                    Log.d("YMC", "onResponse2 성공: " + result?.toString());
+                    Log.d("YMC", "onResponse2 성공: " + result);
                 }else{
                     // 통신이 실패한 경우(응답코드 3xx, 4xx 등)
                     Log.d("YMC", "onResponse2 실패")
