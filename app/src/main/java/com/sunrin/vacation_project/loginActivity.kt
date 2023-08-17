@@ -28,7 +28,7 @@ class loginActivity : AppCompatActivity() {
                         if (it.isSuccessful) {
                             Toast.makeText(this, "로그인을 성공하였습니다", Toast.LENGTH_SHORT).show()
 
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, mapActivity::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()

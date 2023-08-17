@@ -4,4 +4,17 @@
         android:font="@font/premeduim"/>
     <font
         android:font="@font/presemibold"/>
+    <font
+        android:font="@font/prebold"/>
+    <font
+        android:font="@font/intersemibold"/>
+    <font
+        android:font="@font/suitbold"/>
+    <font
+        android:font="@font/suitmedium"/>
+    <font
+        android:font="@font/nanumheavy"/>
+
+    <font
+        android:font="@font/nanumextrabold"/>
 </font-family>
