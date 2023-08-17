@@ -45,13 +45,13 @@ class mapActivity : AppCompatActivity() {
             setCustomImageAnchor(0.5f, 1.0f)    // 마커 이미지 기준점
         }
         mapView.addPOIItem(marker)
-
+        //레트로핏2 통신
         RetrofitClass.getInstance()?.getUserPage(1234)?.enqueue(object: Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if(response.isSuccessful){
                     // 정상적으로 통신이 성고된 경우
                     var result: User? = response.body()
-                    Log.d("YMC", "onResponse2 성공: " + result);
+                    Log.d("YMC", "onResponse2 성공: " + result.toString());
                 }else{
                     // 통신이 실패한 경우(응답코드 3xx, 4xx 등)
                     Log.d("YMC", "onResponse2 실패")
