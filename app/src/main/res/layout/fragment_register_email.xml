@@ -53,23 +53,17 @@
             android:layout_height="40dp"
             android:background="@drawable/et_grayoutline"
             android:drawableLeft="@drawable/mail"
-            android:drawableRight="@null"
-
             android:drawablePadding="8dp"
             android:paddingLeft="14dp"
 
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:paddingRight="14dp"
 
-            android:maxLines="1"
             android:hint="이메일"
             android:textColorHint="#ACACAC"
             android:textSize="14sp"
             android:fontFamily="@font/suitmedium"
-            android:layout_marginTop="8dp">
-
-        </EditText>
+            android:layout_marginTop="8dp"/>
 
         <Button
             android:id="@+id/nextbutton"
@@ -90,6 +84,7 @@
             android:textSize="17dp"
 
             />
+
     </LinearLayout>
 
 
