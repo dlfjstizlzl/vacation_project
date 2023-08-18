@@ -1,6 +1,5 @@
 package com.sunrin.vacation_project
 
-import com.google.firebase.firestore.auth.User
 import retrofit2.Call
 import retrofit2.http.*
 interface RetrofitService {

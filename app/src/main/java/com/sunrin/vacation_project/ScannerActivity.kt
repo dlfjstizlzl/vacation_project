@@ -1,7 +1,9 @@
 package com.sunrin.vacation_project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import com.budiyev.android.codescanner.AutoFocusMode
 import com.budiyev.android.codescanner.CodeScanner
@@ -17,8 +19,13 @@ class ScannerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scanner)
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
-
+        val retrofitBtn = findViewById<Button>(R.id.retrofit)
         codeScanner = CodeScanner(this, scannerView)
+
+        retrofitBtn.setOnClickListener {
+            val intent = Intent(this, Retrofit_loadingActivity::class.java)
+            startActivity(intent)
+        }
 
         // Parameters (default values)
         codeScanner.camera = CodeScanner.CAMERA_BACK // or CAMERA_FRONT or specific camera id

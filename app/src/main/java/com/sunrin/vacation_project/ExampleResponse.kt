@@ -8,7 +8,6 @@ data class User(
     val uidValues: Int,
     @SerializedName("tembler_num")
     val tembler_num: Int,
-
     @SerializedName("Success")
     val Success: Boolean
 

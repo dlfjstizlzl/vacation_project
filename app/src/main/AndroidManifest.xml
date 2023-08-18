@@ -25,8 +25,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Retrofit_loadingActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewregisterActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".TumblrActivity"
@@ -34,32 +45,23 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="8ffeb4f7158364d75a866edd2de20f81"></meta-data>
+            android:value="8ffeb4f7158364d75a866edd2de20f81" />
 
         <activity
             android:name=".mapActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ScannerActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="true"></activity>
-
+            android:exported="true" />
         <activity
             android:name=".loginActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
