@@ -29,7 +29,12 @@ class mapActivity : AppCompatActivity() {
             val intent = Intent(this, ScannerActivity::class.java)
             startActivity(intent)
         }
-
+        binding.ivNotification.setOnClickListener {
+        }
+        binding.ivMenu.setOnClickListener {
+            val intent = Intent(this, profileActivity::class.java)
+            startActivity(intent)
+        }
         val marker = MapPOIItem()
         marker.apply {
             itemName = "서울시청"   // 마커 이름

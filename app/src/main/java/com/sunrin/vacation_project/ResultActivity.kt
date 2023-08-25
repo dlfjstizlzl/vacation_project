@@ -12,7 +12,6 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val transaction = supportFragmentManager.beginTransaction()
         val key_value = intent
         when(key_value.getIntExtra("Success_Value", -1)){
             0 ->  supportFragmentManager.beginTransaction()

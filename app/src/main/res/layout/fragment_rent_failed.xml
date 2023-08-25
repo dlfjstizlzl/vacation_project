@@ -3,15 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".rent_failed"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".rent_failed">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="rental failed"
-        android:gravity="center"
-        android:textSize="40dp"/>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/security_update_warning"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/icon_fail"
+            android:layout_marginBottom="200dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_fail"
+            android:text="대여실패"
+            android:textColor="#FF0000"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:id="@+id/txt_fail"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대여에 실패했습니다\n다시 대여를 신청해주세요"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fail"
+            android:gravity="center"
+            android:id="@+id/txt_fail2"
+            />
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fail2"
+            android:layout_marginBottom="48dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/qrbutton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="QR코드로 대여하기"
+            android:textColor="@color/white"
+            android:fontFamily="@font/suitmedium"
+            android:id="@+id/qrbutton"
+            android:paddingLeft="115dp"
+            android:drawableStart="@drawable/qr_code_scanner"
+            android:drawablePadding="-120dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
