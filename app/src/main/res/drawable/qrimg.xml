@@ -4,4 +4,5 @@
         android:drawable="@drawable/qr_code_scanner"
         android:width="60dp"
         android:height="60dp"/>
+    
 </layer-list>

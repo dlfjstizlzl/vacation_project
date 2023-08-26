@@ -3,6 +3,7 @@ package com.sunrin.vacation_project
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.budiyev.android.codescanner.AutoFocusMode
@@ -19,13 +20,7 @@ class ScannerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scanner)
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
-        val retrofitBtn = findViewById<Button>(R.id.retrofit)
         codeScanner = CodeScanner(this, scannerView)
-
-        retrofitBtn.setOnClickListener {
-            val intent = Intent(this, Retrofit_loadingActivity::class.java)
-            startActivity(intent)
-        }
 
         // Parameters (default values)
         codeScanner.camera = CodeScanner.CAMERA_BACK // or CAMERA_FRONT or specific camera id
@@ -40,6 +35,10 @@ class ScannerActivity : AppCompatActivity() {
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
                 Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_LONG).show()
+                Log.d("QrResult", it.text)
+                val intent = Intent(this, Retrofit_loadingActivity::class.java)
+                intent.putExtra("QR_value", it.text.toInt())
+                startActivity(intent)
             }
         }
         codeScanner.errorCallback = ErrorCallback { // or ErrorCallback.SUPPRESS

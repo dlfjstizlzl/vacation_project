@@ -7,7 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.sunrin.vacation_project.databinding.ActivityLoginBinding
-public var email:String = ""
+public var locked_email:String = ""
+public var locked_name:String = ""
 class loginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -20,16 +21,16 @@ class loginActivity : AppCompatActivity() {
 
         binding.loginbutton.setOnClickListener {
 
-            email = binding.loginedittext.text.toString()
+            locked_email = binding.loginedittext.text.toString()
             val pass = binding.passwordedittext.text.toString()
 
-            if (email.isNotEmpty() && pass.isNotEmpty()) {
-                firebaseAuth.signInWithEmailAndPassword(email, pass)
+            if (locked_email.isNotEmpty() && pass.isNotEmpty()) {
+                firebaseAuth.signInWithEmailAndPassword(locked_email, pass)
                     .addOnCompleteListener {                 //파이어베이스 회원가입
                         if (it.isSuccessful) {
                             Toast.makeText(this, "로그인을 성공하였습니다", Toast.LENGTH_SHORT).show()
                             val intent2 = Intent(this, Retrofit_loadingActivity::class.java)
-                            intent2.putExtra("emailValue", email)
+                            intent2.putExtra("emailValue", locked_email)
                             val intent = Intent(this, mapActivity::class.java)
                             startActivity(intent)
                         } else {
@@ -43,7 +44,7 @@ class loginActivity : AppCompatActivity() {
             }
         }
         binding.registerbutton.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, NewregisterActivity::class.java)
             startActivity(intent)
         }
     }

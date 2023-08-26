@@ -13,16 +13,17 @@ import com.google.firebase.ktx.Firebase
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-
+import kotlin.math.log
 
 class Retrofit_loadingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_retrofit_loading)
         val db = Firebase.firestore
+        val qrnum = intent.getIntExtra("QR_value", 0)
+        Log.d("qr_num", qrnum.toString())
         //레트로핏2 통신
-        RetrofitClass.getInstance()?.getUserPage(1234)?.enqueue(object: Callback<User>{
+        RetrofitClass.getInstance()?.getUserPage(qrnum)?.enqueue(object: Callback<User>{
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 val intent_nextActivity = Intent(this@Retrofit_loadingActivity, ResultActivity::class.java)
                 if(response.isSuccessful){
@@ -31,8 +32,8 @@ class Retrofit_loadingActivity : AppCompatActivity() {
                     Log.d("Retrofit2", "onResponse2 성공: " + result.toString());
                     //val emailValue: String
                     //emailValue = intent.getStringExtra("email").toString()
-                    Log.d("emailValue", email)
-                    val tumbler_num = db.collection("user").document(email)
+                    Log.d("emailValue", locked_email)
+                    val tumbler_num = db.collection("user").document(locked_email)
                     val tumblerValue: Int = result!!.tembler_num
                     tumbler_num
                         .update("tumbler_num", tumblerValue)
