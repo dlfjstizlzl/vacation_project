@@ -36,14 +36,13 @@ class mapActivity : AppCompatActivity() {
         }
         val marker = MapPOIItem()
         marker.apply {
-            itemName = "서울시청"   // 마커 이름
-            mapPoint = MapPoint.mapPointWithGeoCoord(37.5666805, 126.9784147)   // 좌표
+            itemName = "선린인터넷고등학교"   // 마커 이름
+            mapPoint = MapPoint.mapPointWithGeoCoord(37.54315699940157, 126.96766036490028)   // 좌표
             markerType = MapPOIItem.MarkerType.CustomImage          // 마커 모양 (커스텀)
-            customImageResourceId = R.drawable.custom_marker               // 커스텀 마커 이미지
+            customImageResourceId = R.drawable.custom_marker          // 커스텀 마커 이미지
             selectedMarkerType = MapPOIItem.MarkerType.CustomImage  // 클릭 시 마커 모양 (커스텀)
-            customSelectedImageResourceId = R.drawable.custom_marker2       // 클릭 시 커스텀 마커 이미지
-            isCustomImageAutoscale = false      // 커스텀 마커 이미지 크기 자동 조정
-            setCustomImageAnchor(0.5f, 1.0f)    // 마커 이미지 기준점
+            customSelectedImageResourceId = R.drawable.custom_marker   // 클릭 시 커스텀 마커 이미지
+            isCustomImageAutoscale = true      // 커스텀 마커 이미지 크기 자동 조정
         }
         mapView.addPOIItem(marker)
     }

@@ -1,10 +1,12 @@
 package com.sunrin.vacation_project
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.sunrin.vacation_project.databinding.FragmentRentFailedBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,16 @@ class rent_failed : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rent_failed, container, false)
+        val binding = FragmentRentFailedBinding.inflate(inflater,container,false)
+        binding.btn1Exit.setOnClickListener {
+            val intent = Intent(activity, mapActivity::class.java)
+            startActivity(intent)
+        }
+        binding.returnQr.setOnClickListener {
+            val intent = Intent(activity, ScannerActivity::class.java)
+            startActivity(intent)
+        }
+        return binding.root
     }
 
     companion object {
