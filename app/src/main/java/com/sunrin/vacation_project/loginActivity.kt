@@ -8,7 +8,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.sunrin.vacation_project.databinding.ActivityLoginBinding
 public var locked_email:String = ""
-public var locked_name:String = ""
 class loginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
