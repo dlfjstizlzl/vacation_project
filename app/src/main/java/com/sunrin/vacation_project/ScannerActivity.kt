@@ -38,12 +38,15 @@ class ScannerActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         // Callbacks
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
                 if (it.text.toInt() == 4321) {
-                    val intent = Intent(this, rent_failed::class.java) // 추후에 반납액티비티로
-                    startActivity(intent)
+                    Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_LONG).show()
+                    val intent2 = Intent(this, Retrofit_loadingActivity::class.java)// 추후에 반납액티비티로
+                    intent2.putExtra("return_tum", 4321)
+                    startActivity(intent2)
                 } else {
                     Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_LONG).show()
                     Log.d("QrResult", it.text)

@@ -21,6 +21,8 @@
         tools:layout_editor_absoluteY="0dp"
         app:flashButtonVisible="false"
         app:autoFocusButtonVisible="false"
+        app:frameVisible="false"
+
         />
     <TextView
     android:layout_width="wrap_content"
@@ -35,6 +37,14 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
     />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시발거"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/sibal"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -22,6 +22,9 @@ class ResultActivity : AppCompatActivity() {
             1 -> supportFragmentManager.beginTransaction()
                 .replace(R.id.frameLayout, rent_success())
                 .commit()
+            2 -> supportFragmentManager.beginTransaction()
+                .replace(R.id.frameLayout, rent_return())
+                .commit()
         }
     }
 }
