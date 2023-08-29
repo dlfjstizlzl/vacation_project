@@ -35,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_gravity="end">
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp">
             <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -65,6 +66,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/qrbutton"
         android:padding="10dp"
-
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

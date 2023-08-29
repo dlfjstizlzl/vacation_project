@@ -5,19 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScannerActivity">
-
-
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:frameColor="@android:color/white"
-        app:frameCornersSize="50dp"
-        app:frameCornersRadius="0dp"
-        app:frameAspectRatioWidth="1"
         app:frameAspectRatioHeight="1"
+        app:frameAspectRatioWidth="1"
+        app:frameColor="@android:color/white"
+        app:frameCornersRadius="0dp"
+        app:frameCornersSize="50dp"
         app:frameSize="0.75"
         app:frameThickness="10dp"
         app:maskColor="#77000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        app:flashButtonVisible="false"
+        app:autoFocusButtonVisible="false"
         />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="텀대서"
+    android:fontFamily="@font/nanumheavy"
+    android:textSize="20dp"
+    android:textColor="@color/white"
+    android:layout_gravity="start"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+    />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qr_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/exit_qr"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

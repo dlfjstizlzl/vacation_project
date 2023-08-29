@@ -9,6 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:text="로딩 중"
-    android:textSize="50dp"/>
+    android:text="잠시만 기다려주세요"
+    android:textSize="30dp"
+    android:textColor="@color/black"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
